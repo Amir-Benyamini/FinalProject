@@ -6,7 +6,6 @@ import {
 import Main from './Main'
 import { observer, inject } from 'mobx-react'
 
-
 const Navbar = inject("user") (observer((props) => {
 	console.log(props.user.user.img)
 	return (
@@ -17,8 +16,9 @@ const Navbar = inject("user") (observer((props) => {
 					<span>Welcome: {props.user.user.name}</span>
 					<Link to="/">Main</Link>
 					<Link to="/lessons">Lessons</Link>
-					<Link to="/lessons">Acount</Link>
+					<Link to="/acount">Acount</Link>
 					<Route path="/" exact component= {Main} />
+					
 				</div>
 					 :
 				<div>

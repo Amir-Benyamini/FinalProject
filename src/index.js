@@ -10,7 +10,7 @@ const axios = require('axios')
 
 // const getLessons = async function() {
 //   try {
-//     const response = await axios.get('/getAllLessons');
+//     const response = await axios.get('/allLessons');
 //     LessonsStore(response);
 //   } catch (error) {
 //     console.error(error);
