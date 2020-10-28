@@ -12,7 +12,7 @@ router.get('/allLessons', function (req, res) {
 })
 
 router.get('/user', function (req, res) {
-    
+   
 })
 
 
