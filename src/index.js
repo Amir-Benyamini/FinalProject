@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'mobx-react';
-import lessonsStore from './Stores/lessonsStore';
+import lessonsStore from './Stores/LessonsStore';
 import userStore from './Stores/userStore';
 const axios = require('axios')
 
