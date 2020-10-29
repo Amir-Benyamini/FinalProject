@@ -37,7 +37,7 @@ function VideoRoom(props) {
 
   useEffect(() => {
 		console.log(props)
-    socket.current = io.connect(`/${props.lesson.title}`);
+    socket.current = io.connect(`/lessons`);
     navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(stream => {
       setStream(stream);
       if (userVideo.current) {
