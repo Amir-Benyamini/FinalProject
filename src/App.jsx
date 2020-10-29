@@ -3,16 +3,15 @@ import React from "react";
 import {
 	BrowserRouter as Router
 } from "react-router-dom";
-import NavbarMain from './components/Navbar'
+import Nav from './components/Navbar'
 
 function App() {
 	return (
 		<Router>
 			<div id="App">
 				<div id='Nav-container'>
-					<NavbarMain />
+					<Nav />
 				</div>
-				
 			</div>
 		</Router>
 
