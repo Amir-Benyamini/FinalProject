@@ -8,15 +8,15 @@ import lessonsStore from './Stores/LessonsStore';
 import userStore from './Stores/userStore';
 const axios = require('axios')
 
-// const getLessons = async function() {
-//   try {
-// 		const response = await axios.get('/allLessons');
+const getLessons = async function() {
+  try {
+		const response = await axios.get('/allLessons');
 		
-//     return(response);
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
+    return(response);
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 // const getUser = async function() {
 //   try {
@@ -27,9 +27,9 @@ const axios = require('axios')
 //   }
 // }
 
-const user = userStore({id:7, name:'Amir Benyamini', pasword:278278, img:'https://media-exp1.licdn.com/dms/image/C4D03AQHEmW4PGr22_A/profile-displayphoto-shrink_200_200/0?e=1609372800&v=beta&t=lsPfv0-L-wjz6vcEe6YnJex_MvwEBvK2G6l1IIvk5bQ', nextLessons:[1,2,3]})
+// const user = userStore({id:7, name:'Amir Benyamini', pasword:278278, img:'https://media-exp1.licdn.com/dms/image/C4D03AQHEmW4PGr22_A/profile-displayphoto-shrink_200_200/0?e=1609372800&v=beta&t=lsPfv0-L-wjz6vcEe6YnJex_MvwEBvK2G6l1IIvk5bQ', nextLessons:[1,2,3]})
 
-const lessons = lessonsStore([{id:1, title:'Meditaion', decription:'short meditaion seasion for enhanced focus and stress release', price: 50, teacher:'Yaron', level:'beginner',duration: 30, img:'https://www.news-medical.net/image.axd?picture=2019%2F5%2Fshutterstock_688367407.jpg'}, {id:2, title:'Yoga', decription:'short yoga seasion for relaxing muscles and mobility', price: 40, teacher:'Shahar', level:'beginner', duration: 20, img:'https://lh3.googleusercontent.com/ZkshrLf54rvmlMBg_Rg78yCr3FDCWWm9yURMvsWI-2Vsn__fB1TflmKO0Lzthgbhdwqid48jTBTFKIEzy_NyCl9YPMkEIkfNpvSbE3_9ZQLYCdID=d'}, {id:3, title:'Hiit', decription:'short and beginner frindly high intencity interval workout for calories burning and faster metabolism', price: 30, teacher:'Michal', level:'beginner', duration: 15, img:'https://nak2.com/wp-content/uploads/2019/01/hiit-fit-og.jpg'}])
+const lessons = lessonsStore(getLessons())
 
 // const lessons = lessonsStore(getLessons())
 const stores = {lessons, user}
