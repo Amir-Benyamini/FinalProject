@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { observer, inject } from 'mobx-react'
 import Lesson from './Lesson'
 
-const  Lessons = inject("lessons") (observer((props) => {
-	console.log(props.user)
+const Lessons = inject("lessonsStore")(observer((props) => {
+	useEffect(async () => {
+		props.lessonsStore.fetchLessons()
+	}, []);
+
 	return (
-			<div id="Lessons">
-		{props.lessons.lessons.map(l => <Lesson lesson={l} />)}
-			</div>
-			
+		<div id="Lessons">
+			{props.lessonsStore.lessons.map((lesson, i)=> <Lesson key={i} lesson={lesson} />)}
+		</div>
 	);
 }))
 

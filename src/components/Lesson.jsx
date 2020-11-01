@@ -14,7 +14,7 @@ function Lesson(props) {
 				<img width="400" height="200" alt='thumbmile' src={props.lesson.img}/>
 	<p>Teacher: {props.lesson.teacher} - Duration: {props.lesson.duration} Minutes - Price: {props.lesson.price}$ - Level: {props.lesson.level}</p>
 
-	<Link to={`/${props.lesson.title}`}><button>Register</button></Link>
+	<Link to={`/lessons`}><button>Register</button></Link>
 	<Route path={`/${props.lesson.title}`} exact render= {() => <VideoRoom lesson={props.Lesson}/>}/>
 			</div>
 			
